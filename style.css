@@ -379,6 +379,10 @@ footer {
   display: none;
 }
 
+.mobile-banner {
+  display: none;
+}
+
 @media only screen and (max-width: 600px) {
 
   .image-wrapper {
@@ -477,7 +481,7 @@ footer {
   }
 
   .higlihts-text {
-    margin-bottom: 2em;
+    margin-bottom: 1em;
   }
 
   .paddingtop {
@@ -500,10 +504,33 @@ footer {
     font-size: 60px;
     font-weight: bold;
     -webkit-text-stroke: 2px var(--button-color);
+    transform: translateY(1.5em);
   }
 
   .header-container-text p {
     -webkit-text-stroke: 1px var(--button-color);
     font-weight: 200;
+    transform: translateY(2.9em);
+  }
+
+  .banner {
+    display: none;
+  }
+
+  .mobile-banner {
+    display: block;
+    width: 100%;
+    height: auto;
+    transform: translateY(-9em);
+  }
+  .mobile-banner-container {
+    border: 15px solid var(--button-color);
+    overflow: hidden;
+    height: auto;
+  }
+
+  .mobile-banner-container img {
+    scale: .7;
+    transform: translateX(-8em);
   }
 }
