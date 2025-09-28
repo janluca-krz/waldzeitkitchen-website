@@ -434,12 +434,12 @@ footer {
   }
   #mobile-menu.is-open { transform: translateX(0); }
   .buttons ul li {
-    padding-top: 3em;
+    padding-top: 1em;
     padding-left: 1rem;
   }
 
   .buttons ul li a {
-    font-size: 36px;
+    font-size: 30px;
     text-decoration: none;
     color: var(--background-color);
   }
@@ -504,13 +504,13 @@ footer {
     font-size: 60px;
     font-weight: bold;
     -webkit-text-stroke: 2px var(--button-color);
-    transform: translateY(1.5em);
+    transform: translateY(1em);
   }
 
   .header-container-text p {
     -webkit-text-stroke: 1px var(--button-color);
     font-weight: 200;
-    transform: translateY(2.9em);
+    transform: translateY(1.9em);
   }
 
   .banner {
