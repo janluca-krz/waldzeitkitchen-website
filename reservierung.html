@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>WaldZeit - Reservierung</title>
+</head>
+<body class="reservierung-body">
+    <header>
+        <ul>
+            <li><a href="index.html"><img src="medien/logo_Klein.jpg" height="100px" width="100px" alt="WaldZeit Kitchen Logo"></a></li>
+            <li><a href="reservierung.html" class="text">Reservierung</a></li>
+            <li><a href="speisekarte.html" class="text">Speisekarte</a></li>
+            <li><a href="location.html" class="text">Location</a></li>
+        </ul>
+    </header>
+    <div class="reservierung-main">
+        <div class="form">
+            <h2>Tisch reservieren</h2>
+            <form action="" method="post">
+                <div class="form-input">
+                    <input type="text" id="name" name="name" placeholder="Name" required>
+                </div>
+
+                <div class="form-input">
+                    <input type="email" id="email" name="email" placeholder="E-Mail" required>
+                </div>
+
+                <div class="form-input">
+                    <input type="tel" id="phone" name="phone" placeholder="Telefonnummer" required>
+                </div>
+
+                <div class="form-input">
+                    <input type="date" id="date" name="date" placeholder="Datum" required>
+                </div>
+
+                <div class="form-input">
+                    <input type="time" id="time" name="time" placeholder="Uhrzeit" required>
+                </div>
+
+                <div class="form-input">
+                    <input type="number" id="persons" name="persons" min="1" placeholder="Anzahl der Personen" required>
+                </div>
+
+                <div class="form-input">
+                    <textarea id="requests" name="requests" rows="4" placeholder="Besondere Wünsche:"></textarea>
+                </div>
+                
+                <div class="form-input">
+                    <input class="submit" id="submit" type="submit" value="Reservieren">
+                </div>    
+            </form>
+        </div>
+    </div>
+</body>
+</html>

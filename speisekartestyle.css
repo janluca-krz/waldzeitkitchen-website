@@ -1,0 +1,97 @@
+/* ==== THEME (ersetzen) ==== */
+:root{
+  /* Vorgabe aus deinem Design */
+  --background-color: #F6EDDA;
+  --text-color: #2E402D;
+  --button-color: #59633B;
+  --white: #FFFFFF;
+  --black: #000000;
+
+  /* interne Aliase (lassen bestehende Regeln weiter funktionieren) */
+  --bg: var(--background-color);
+  --text: var(--text-color);
+  --primary: var(--text-color);
+  --accent: var(--button-color);
+  --muted: color-mix(in oklab, var(--text-color) 65%, var(--white));
+  --divider: color-mix(in oklab, var(--text-color) 12%, var(--white) 88%);
+
+  --radius: 12px;
+  --shadow: 0 8px 24px rgba(0,0,0,.06);
+  --container: 1100px;
+
+  --space-1:.5rem; --space-2:.75rem; --space-3:1rem;
+  --space-4:1.5rem; --space-5:2rem; --space-6:3rem;
+  --title: clamp(1.6rem, 1.1rem + 1.5vw, 2rem);
+}
+
+/* Basisfarben anwenden (falls noch nicht vorhanden) */
+body{ background:var(--bg); color:var(--text); }
+
+/* Trennlinien/Texte an neues Farbschema angleichen */
+.menu-header{ background:transparent; border-bottom:1px solid var(--divider); }
+.menu-section{ border-top:1px solid var(--divider); }
+.menu-item{ border-bottom:1px dashed var(--divider); }
+.menu-item__price{ color:var(--accent); }
+.menu-header__title, .menu-section__title{ color:var(--primary); }
+.menu-header__subtitle{ color:var(--text); opacity:.85; }
+
+/* ===== PIZZA-LOOK wie im Screenshot (am Ende der Datei anhängen) ===== */
+#pizza{
+  text-align:center;
+}
+#pizza .menu-section__title{
+  font-size:clamp(2rem, 1.4rem + 2.2vw, 3rem);
+  font-weight:800;
+  border:0;
+  margin-bottom: clamp(1.25rem, 1rem + 1vw, 2rem);
+}
+
+/* 2-spaltiges, luftiges Raster */
+#pizza .menu-grid{
+  display:grid;
+  gap: clamp(1.25rem, 1rem + 1vw, 2rem) 6rem;
+  grid-template-columns: 1fr;
+  justify-items:center;
+  margin-top: clamp(1rem, .6rem + 1vw, 1.75rem);
+}
+@media (min-width: 860px){
+  #pizza .menu-grid{ grid-template-columns: repeat(2, minmax(260px, 1fr)); }
+}
+
+/* Karten-Stil (zentriert, keine harten Kanten) */
+#pizza .menu-item{
+  width: min(340px, 100%);
+  border: 0;                /* keine Linien */
+  padding: .25rem 0 2.25rem;
+}
+#pizza .menu-item__head{
+  display:block;            /* Name/Preis untereinander */
+}
+#pizza .menu-item__name{
+  font-weight:800;
+  font-size: clamp(1.25rem, 1rem + .8vw, 1.6rem);
+  color: var(--text-color);
+}
+#pizza .menu-item__desc,
+#pizza .menu-item__allergens{
+  color: color-mix(in oklab, var(--text-color) 70%, var(--white));
+}
+#pizza .menu-item__desc{
+  margin-top:.35rem;
+  line-height:1.5;
+}
+#pizza .menu-item__allergens{
+  display:block;
+  margin-top:.35rem;
+  font-size:.95rem;
+}
+#pizza .menu-item__price{
+  display:block;
+  margin-top:.25rem;
+  font-weight:800;
+  color: var(--text-color);   /* im Screenshot nicht akzentfarbig */
+}
+
+/* optional: etwas mehr Luft zwischen den vertikalen “Zeilen” */
+#pizza .menu-grid > .menu-list{ margin-top:0; }
+#pizza .menu-list{ list-style:none; padding:0; }
